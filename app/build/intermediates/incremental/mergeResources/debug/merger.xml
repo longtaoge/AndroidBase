@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="22.2.1"><source path="J:\domes\androidbase\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\res"/></dataSet><dataSet config="main"><source path="J:\domes\androidbase\app\src\main\res"><file name="bank_input_number4_bg" path="J:\domes\androidbase\app\src\main\res\drawable-hdpi\bank_input_number4_bg.png" qualifiers="hdpi" type="drawable"/><file name="ic_launcher" path="J:\domes\androidbase\app\src\main\res\drawable-hdpi\ic_launcher.png" qualifiers="hdpi" type="drawable"/><file name="text_kahao3" path="J:\domes\androidbase\app\src\main\res\drawable-hdpi\text_kahao3.png" qualifiers="hdpi" type="drawable"/><file name="ic_launcher" path="J:\domes\androidbase\app\src\main\res\drawable-mdpi\ic_launcher.png" qualifiers="mdpi" type="drawable"/><file name="ic_launcher" path="J:\domes\androidbase\app\src\main\res\drawable-xhdpi\ic_launcher.png" qualifiers="xhdpi" type="drawable"/><file name="ic_launcher" path="J:\domes\androidbase\app\src\main\res\drawable-xxhdpi\ic_launcher.png" qualifiers="xxhdpi" type="drawable"/><file name="activity_main" path="J:\domes\androidbase\app\src\main\res\layout\activity_main.xml" qualifiers="" type="layout"/><file name="bank_card_input" path="J:\domes\androidbase\app\src\main\res\layout\bank_card_input.xml" qualifiers="" type="layout"/><file path="J:\domes\androidbase\app\src\main\res\values\dimens.xml" qualifiers=""><dimen name="activity_vertical_margin">16dp</dimen><dimen name="activity_horizontal_margin">16dp</dimen></file><file path="J:\domes\androidbase\app\src\main\res\values\strings.xml" qualifiers=""><string name="hello_world">Hello world!</string><string name="action_settings">Settings</string><string name="app_name">androidbase</string></file><file path="J:\domes\androidbase\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style><style name="bank_card_editText_style">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#3f3f3f</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@null</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:numeric">integer</item>
+    </style><declare-styleable name="bank_card_number">
+        <attr format="string" name="card_number"/>
+        <attr format="string" name="card_type"/>
+    </declare-styleable><style name="AppBaseTheme" parent="AppBaseTheme">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+
+
+
+
+        -->
+    </style></file><file path="J:\domes\androidbase\app\src\main\res\values-w820dp\dimens.xml" qualifiers="w820dp"><dimen name="activity_horizontal_margin">64dp</dimen></file></source><source path="J:\domes\androidbase\app\build\generated\res\rs\debug"/><source path="J:\domes\androidbase\app\build\generated\res\generated\debug"/></dataSet><dataSet config="debug"><source path="J:\domes\androidbase\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="bank_card_number"><attr format="string" name="card_number"/><attr format="string" name="card_type"/></declare-styleable></configuration></mergedItems></merger>
