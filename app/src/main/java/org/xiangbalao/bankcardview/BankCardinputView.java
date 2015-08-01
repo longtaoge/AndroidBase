@@ -1,16 +1,17 @@
 package org.xiangbalao.bankcardview;
 
-import org.xiangbalao.androidbase.R;
-
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.text.Editable;
+import android.text.Selection;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
+import org.xiangbalao.androidbase.R;
 
 public class BankCardinputView extends RelativeLayout {
 
@@ -52,7 +53,7 @@ public class BankCardinputView extends RelativeLayout {
 	private char[] number_array;
 
 	public BankCardinputView(Context context, AttributeSet attrs,
-			int defStyleAttr, int defStyleRes) {
+							 int defStyleAttr, int defStyleRes) {
 		super(context, attrs, defStyleAttr, defStyleRes);
 
 	}
@@ -83,7 +84,7 @@ public class BankCardinputView extends RelativeLayout {
 
 	/**
 	 * 描述:填充数字 </br> 开发人员：weiyb</br> 创建时间：2015-7-28</br>
-	 * 
+	 *
 	 * @param inputNumber
 	 */
 	public boolean fillViewData(String inputNumber) {
@@ -204,15 +205,17 @@ public class BankCardinputView extends RelativeLayout {
 		acount_num1_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
+
 					acount_num2_value.requestFocus();
+
 				}
 			}
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
@@ -223,7 +226,7 @@ public class BankCardinputView extends RelativeLayout {
 		acount_num2_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount_num3_value.requestFocus();
 				}
@@ -231,21 +234,23 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount_num1_value.requestFocus();
+					moveCursor(acount_num1_value);
 				}
 			}
+
 		});
 
 		acount_num3_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount_num4_value.requestFocus();
 				}
@@ -253,13 +258,14 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount_num2_value.requestFocus();
+					moveCursor(acount_num2_value);
 				}
 			}
 		});
@@ -267,7 +273,7 @@ public class BankCardinputView extends RelativeLayout {
 		acount_num4_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount_num5_value.requestFocus();
 				}
@@ -275,13 +281,14 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount_num3_value.requestFocus();
+					moveCursor(acount_num3_value);
 				}
 			}
 		});
@@ -289,7 +296,7 @@ public class BankCardinputView extends RelativeLayout {
 		acount_num5_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount_num6_value.requestFocus();
 				}
@@ -297,13 +304,14 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount_num4_value.requestFocus();
+					moveCursor(acount_num4_value);
 				}
 			}
 		});
@@ -311,7 +319,7 @@ public class BankCardinputView extends RelativeLayout {
 		acount_num6_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount_num7_value.requestFocus();
 				}
@@ -319,13 +327,14 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount_num5_value.requestFocus();
+					moveCursor(acount_num5_value);
 				}
 			}
 		});
@@ -333,7 +342,7 @@ public class BankCardinputView extends RelativeLayout {
 		acount_num7_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount_num8_value.requestFocus();
 				}
@@ -341,13 +350,14 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount_num6_value.requestFocus();
+					moveCursor(acount_num6_value);
 				}
 			}
 		});
@@ -355,7 +365,7 @@ public class BankCardinputView extends RelativeLayout {
 		acount_num8_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount_num9_value.requestFocus();
 				}
@@ -363,13 +373,14 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount_num7_value.requestFocus();
+					moveCursor(acount_num7_value);
 				}
 			}
 		});
@@ -377,7 +388,7 @@ public class BankCardinputView extends RelativeLayout {
 		acount_num9_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount_num10_value.requestFocus();
 				}
@@ -385,13 +396,14 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount_num8_value.requestFocus();
+					moveCursor(acount_num8_value);
 				}
 			}
 		});
@@ -399,7 +411,7 @@ public class BankCardinputView extends RelativeLayout {
 		acount_num10_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount_num11_value.requestFocus();
 				}
@@ -407,13 +419,14 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount_num9_value.requestFocus();
+					moveCursor(acount_num9_value);
 				}
 			}
 		});
@@ -421,7 +434,7 @@ public class BankCardinputView extends RelativeLayout {
 		acount_num11_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount_num12_value.requestFocus();
 				}
@@ -429,13 +442,14 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount_num10_value.requestFocus();
+					moveCursor(acount_num10_value);
 				}
 			}
 		});
@@ -443,7 +457,7 @@ public class BankCardinputView extends RelativeLayout {
 		acount_num12_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount_num13_value.requestFocus();
 				}
@@ -451,13 +465,14 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount_num11_value.requestFocus();
+					moveCursor(acount_num11_value);
 				}
 			}
 		});
@@ -465,7 +480,7 @@ public class BankCardinputView extends RelativeLayout {
 		acount_num13_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount_num14_value.requestFocus();
 				}
@@ -473,13 +488,14 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount_num12_value.requestFocus();
+					moveCursor(acount_num12_value);
 				}
 			}
 		});
@@ -487,7 +503,7 @@ public class BankCardinputView extends RelativeLayout {
 		acount_num14_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount_num15_value.requestFocus();
 				}
@@ -495,13 +511,14 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount_num13_value.requestFocus();
+					moveCursor(acount_num13_value);
 				}
 			}
 		});
@@ -509,7 +526,7 @@ public class BankCardinputView extends RelativeLayout {
 		acount_num15_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount_num16_value.requestFocus();
 				}
@@ -517,13 +534,14 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount_num14_value.requestFocus();
+					moveCursor(acount_num14_value);
 				}
 			}
 		});
@@ -531,7 +549,7 @@ public class BankCardinputView extends RelativeLayout {
 		acount_num16_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount19_num17_value.clearFocus();
 				}
@@ -539,13 +557,14 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount_num15_value.requestFocus();
+					moveCursor(acount_num15_value);
 				}
 			}
 		});
@@ -555,7 +574,7 @@ public class BankCardinputView extends RelativeLayout {
 		acount19_num17_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount19_num18_value.clearFocus();
 				}
@@ -563,20 +582,21 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount_num16_value.requestFocus();
+					moveCursor(acount_num16_value);
 				}
 			}
 		});
 		acount19_num18_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					acount19_num19_value.clearFocus();
 				}
@@ -584,20 +604,21 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount19_num17_value.requestFocus();
+					moveCursor(acount19_num17_value);
 				}
 			}
 		});
 		acount19_num19_value.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				if (s.length() == 1 && count == 1) {
 					// acount19_num19_value.clearFocus();
 				}
@@ -605,13 +626,14 @@ public class BankCardinputView extends RelativeLayout {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
 				if (s.length() == 0) {
 					acount19_num18_value.requestFocus();
+					moveCursor(acount19_num18_value);
 				}
 			}
 		});
@@ -663,9 +685,9 @@ public class BankCardinputView extends RelativeLayout {
 
 			if (!"".equals(acount19_num17_value.getText().toString().trim())
 					&& !"".equals(acount19_num18_value.getText().toString()
-							.trim())
+					.trim())
 					&& !"".equals(acount19_num19_value.getText().toString()
-							.trim())) {
+					.trim())) {
 
 				accountNum
 						.append(acount19_num17_value.getText().toString()
@@ -686,5 +708,13 @@ public class BankCardinputView extends RelativeLayout {
 		return accountNum.toString();
 
 	};
+
+	private void moveCursor(EditText mEditText) {
+		Editable editable = mEditText.getText();
+		int len = editable.length();
+		if (len > 0) {
+			Selection.setSelection(editable, len);
+		}
+	}
 
 }
