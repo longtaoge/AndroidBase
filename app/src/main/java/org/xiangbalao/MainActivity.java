@@ -1,12 +1,13 @@
-package org.xiangbalao.androidbase;
-import org.xiangbalao.bankcardview.BankCardinputView;
-
+package org.xiangbalao;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+
+import org.xiangbalao.androidbase.R;
+import org.xiangbalao.bankcardview.BankCardinputView;
 public class MainActivity extends Activity {
 
 	TextView textView;
